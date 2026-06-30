@@ -1,0 +1,64 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is an admin
+    function isAdmin() {
+      return request.auth != null && 
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // User Profiles
+    match /users/{userId} {
+      allow read, write: if request.auth != null && (request.auth.uid == userId || isAdmin());
+      allow create: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Tutorials
+    match /tutorials/{tutorialId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // YouTube Videos
+    match /youtubeVideos/{videoId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Gallery Items
+    match /gallery/{itemId} {
+      allow read: if true;
+      allow write: if isAdmin();
+      // Allow authenticated users to increment like/share counters
+      allow update: if request.auth != null;
+    }
+
+    // Courses
+    match /courses/{courseId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Resources
+    match /resources/{resourceId} {
+      allow read: if true;
+      allow write: if isAdmin();
+      // Allow authenticated users to update download counters
+      allow update: if request.auth != null;
+    }
+
+    // Community Posts
+    match /communityPosts/{postId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Newsletter Subscribers
+    match /newsletter/{subscriberId} {
+      allow create: if true; // Public signup allowed
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}
