@@ -53,11 +53,11 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md transition-all">
-      <div className="mx-auto flex max-w-7xl h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
         
         {/* Branding Logo */}
         <Link href="/" className="flex items-center">
-          <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-10 w-auto" />
+          <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-16 w-auto" />
         </Link>
 
         {/* Desktop Navigation Link Menu */}

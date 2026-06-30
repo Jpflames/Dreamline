@@ -92,7 +92,7 @@ export default function Register() {
         {/* Title branding */}
         <div className="text-center space-y-2">
           <Link href="/" className="inline-flex items-center justify-center">
-            <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-12 w-auto" />
+            <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-20 w-auto" />
           </Link>
           <h2 className="text-2xl font-bold font-poppins">Create Creative Account</h2>
           <p className="text-xs text-slate-400">Join Dreamline to unlock lessons, bookmarks, and downloads.</p>

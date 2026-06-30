@@ -98,11 +98,19 @@ export default function Home() {
     <div className="w-full pb-20">
       
       {/* 1. Cinematic Hero Section */}
-      <section className="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-slate-950">
-        {/* Background glow effects */}
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-900/30 via-slate-950 to-slate-950" />
-        <div className="absolute top-1/4 left-1/4 h-[300px] w-[300px] rounded-full bg-violet-600/10 blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 h-[400px] w-[400px] rounded-full bg-indigo-600/15 blur-[150px] pointer-events-none" />
+      <section className="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/bg 2.mp4" type="video/mp4" />
+        </video>
+        {/* Black Shade Overlay */}
+        <div className="absolute inset-0 z-0 bg-black/70" />
 
         <div className="relative z-10 max-w-5xl px-4 text-center sm:px-6 lg:px-8 space-y-8">
           <motion.div

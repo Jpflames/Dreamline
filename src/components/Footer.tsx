@@ -89,7 +89,7 @@ export default function Footer() {
           {/* Logo & Info */}
           <div className="space-y-6 xl:col-span-1">
             <Link href="/" className="flex items-center">
-              <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-10 w-auto" />
+              <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-20 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-md">
               Learn creative design, branding, illustration, editing, and animation directly from experts. Master the tools and build a professional portfolio.

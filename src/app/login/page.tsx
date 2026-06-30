@@ -97,7 +97,7 @@ export default function Login() {
         {/* Title branding */}
         <div className="text-center space-y-2">
           <Link href="/" className="inline-flex items-center justify-center">
-            <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-12 w-auto" />
+            <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-20 w-auto" />
           </Link>
           <h2 className="text-2xl font-bold font-poppins">
             {forgotPasswordMode ? 'Recover Password' : 'Sign in to Dreamline'}
