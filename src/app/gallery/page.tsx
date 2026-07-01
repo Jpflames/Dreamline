@@ -194,7 +194,7 @@ function GalleryContent() {
                 className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500"
               />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <span className="rounded bg-primary/95 px-2 py-0.5 text-[10px] sm:text-xs text-white">
                     {item.category}

@@ -177,6 +177,34 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 
+/* Professional Gold Button */
+.btn-gold {
+  background: linear-gradient(135deg, #c29b38 0%, #d4af37 50%, #b8860b 100%);
+  color: #0c0a06;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #d4af37 0%, #e6c567 50%, #c29b38 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.dark .btn-gold {
+  background: linear-gradient(135deg, #d4af37 0%, #f5c040 50%, #c29b38 100%);
+  color: #0c0a06;
+  border: 1px solid rgba(245, 192, 64, 0.3);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.dark .btn-gold:hover {
+  background: linear-gradient(135deg, #f5c040 0%, #fce79f 50%, #d4af37 100%);
+  box-shadow: 0 4px 20px rgba(245, 192, 64, 0.4);
+}
+
 /* Symmetrical Grid Item */
 .symmetric-aspect {
   aspect-ratio: 16 / 10;

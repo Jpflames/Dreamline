@@ -88,26 +88,30 @@ export default function Footer() {
           
           {/* Logo & Info */}
           <div className="space-y-6 xl:col-span-1">
-            <Link href="/" className="flex items-center">
-              <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-20 w-auto" />
+            <Link href="/" className="flex items-center gap-3">
+              <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-12 w-auto" />
+              <span className="text-2xl font-bold font-poppins tracking-tight flex items-center">
+                <span className="text-gradient-gold">Dreamline</span>
+                <span className="text-foreground ml-1.5 font-semibold">visuals</span>
+              </span>
             </Link>
-            <p className="text-sm text-muted-foreground max-w-md">
+            <p className="text-sm text-slate-700 dark:text-slate-300 max-w-md">
               Learn creative design, branding, illustration, editing, and animation directly from experts. Master the tools and build a professional portfolio.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">
                 <Youtube className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">
                 <Github className="h-5 w-5" />
               </a>
             </div>
@@ -120,7 +124,7 @@ export default function Footer() {
             <div className="col-span-2 grid grid-cols-2 gap-8 lg:col-span-2">
               {footerLinks.map((group) => (
                 <div key={group.title}>
-                  <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground/80 dark:text-slate-200">
+                  <h3 className="text-sm font-semibold tracking-wider uppercase text-slate-900 dark:text-white">
                     {group.title}
                   </h3>
                   <ul className="mt-4 space-y-2">
@@ -128,7 +132,7 @@ export default function Footer() {
                       <li key={link.name}>
                         <Link
                           href={link.path}
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                          className="text-sm text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
                         >
                           {link.name}
                         </Link>
@@ -141,10 +145,10 @@ export default function Footer() {
 
             {/* Newsletter Subscription */}
             <div className="col-span-2 mt-8 lg:col-span-1 lg:mt-0">
-              <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground/80 dark:text-slate-200">
+              <h3 className="text-sm font-semibold tracking-wider uppercase text-slate-900 dark:text-white">
                 Join the Newsletter
               </h3>
-              <p className="mt-4 text-sm text-muted-foreground">
+              <p className="mt-4 text-sm text-slate-700 dark:text-slate-300">
                 Get weekly updates on resources, tutorials, vector assets, and student spotlights.
               </p>
               <form className="mt-4 sm:flex sm:max-w-md lg:block" onSubmit={handleSubscribe}>
@@ -159,7 +163,7 @@ export default function Footer() {
                   />
                   <button
                     type="submit"
-                    className="absolute right-1 top-1 bottom-1 flex items-center justify-center rounded-md bg-primary px-3 text-white hover:bg-violet-700 transition-colors cursor-pointer"
+                    className="absolute right-1 top-1 bottom-1 flex items-center justify-center btn-gold rounded-md px-3 transition-colors cursor-pointer"
                     disabled={status === 'loading'}
                   >
                     <Send className="h-4 w-4" />
@@ -182,14 +186,14 @@ export default function Footer() {
 
         {/* Bottom Credits */}
         <div className="mt-12 border-t border-border/60 pt-8 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-slate-700 dark:text-slate-300">
             &copy; {new Date().getFullYear()} Dreamline Inc. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <Link href="/about" className="text-xs text-muted-foreground hover:text-primary">About</Link>
-            <Link href="/contact" className="text-xs text-muted-foreground hover:text-primary">Contact</Link>
-            <a href="#" className="text-xs text-muted-foreground hover:text-primary">Privacy Policy</a>
-            <a href="#" className="text-xs text-muted-foreground hover:text-primary">Terms of Service</a>
+            <Link href="/about" className="text-xs text-slate-700 dark:text-slate-300 hover:text-primary">About</Link>
+            <Link href="/contact" className="text-xs text-slate-700 dark:text-slate-300 hover:text-primary">Contact</Link>
+            <a href="#" className="text-xs text-slate-700 dark:text-slate-300 hover:text-primary">Privacy Policy</a>
+            <a href="#" className="text-xs text-slate-700 dark:text-slate-300 hover:text-primary">Terms of Service</a>
           </div>
         </div>
       </div>

@@ -138,7 +138,7 @@ export default function Login() {
 
             <button
               type="submit"
-              className="w-full rounded-xl bg-linear-to-r from-orange-400 via-yellow-600 to-neutral-950 hover:opacity-90 py-3 text-sm font-semibold text-white transition-colors cursor-pointer"
+              className="btn-gold w-full rounded-xl py-3 text-sm transition-colors cursor-pointer"
             >
               Send Reset Link
             </button>
@@ -221,7 +221,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={submitLoading}
-                className="w-full rounded-xl bg-linear-to-r from-orange-400 via-yellow-600 to-neutral-950 hover:opacity-90 py-3 text-sm font-semibold text-white transition-colors shadow-sm disabled:opacity-50 cursor-pointer"
+                className="btn-gold w-full rounded-xl py-3 text-sm transition-colors shadow-sm disabled:opacity-50 cursor-pointer"
               >
                 {submitLoading ? 'Signing In...' : 'Sign In'}
               </button>

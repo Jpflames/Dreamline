@@ -107,7 +107,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
-          <source src="/bg 2.mp4" type="video/mp4" />
+          <source src="/bg-2.mp4" type="video/mp4" />
         </video>
         {/* Black Shade Overlay */}
         <div className="absolute inset-0 z-0 bg-black/70" />
@@ -149,7 +149,7 @@ export default function Home() {
           >
             <Link
               href="/tutorials"
-              className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-orange-400 via-yellow-600 to-neutral-950 px-8 py-4 text-base font-semibold text-white hover:opacity-90 transition-all shadow-lg"
+              className="btn-gold w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-base transition-all shadow-lg"
             >
               Explore Tutorials
               <ArrowRight className="h-5 w-5" />
@@ -258,7 +258,7 @@ export default function Home() {
                 className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <span className="rounded bg-primary/80 px-2 py-0.5 text-xs text-white">
                     {item.category}
@@ -338,7 +338,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Symmetrical Hover Overlay Details */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <span className="rounded bg-red-600 px-2 py-0.5 text-xs text-white font-semibold">
                     YouTube
@@ -441,7 +441,7 @@ export default function Home() {
                             window.location.href = '/login';
                           }
                         }}
-                        className="flex-1 text-center rounded-xl bg-primary py-3 text-sm font-semibold text-primary-foreground hover:bg-violet-700 transition-colors cursor-pointer"
+                        className="flex-1 text-center btn-gold rounded-xl py-3 text-sm transition-colors cursor-pointer"
                       >
                         Enroll Now
                       </button>

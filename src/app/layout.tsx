@@ -38,16 +38,16 @@ export default function RootLayout({
       className={`${poppins.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col text-foreground relative">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="fixed inset-0 w-full h-full object-cover -z-10"
-        >
-          <source src="/dreamline-bg.mp4" type="video/mp4" />
-        </video>
         <div className="relative z-0 flex flex-col min-h-full w-full bg-background/80">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="fixed inset-0 w-full h-full object-cover -z-10"
+          >
+            <source src="/dreamline-bg.mp4" type="video/mp4" />
+          </video>
           <AppProvider>
             <Navbar />
             <main className="flex-grow flex flex-col">

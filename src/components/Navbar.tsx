@@ -56,8 +56,12 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
         
         {/* Branding Logo */}
-        <Link href="/" className="flex items-center">
-          <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-16 w-auto" />
+        <Link href="/" className="flex items-center gap-3">
+          <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-10 w-auto" />
+          <span className="text-xl font-bold font-poppins tracking-tight flex items-center">
+            <span className="text-gradient-gold">Dreamline</span>
+            <span className="text-foreground ml-1 font-semibold">visuals</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation Link Menu */}
@@ -184,7 +188,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/register"
-                className="rounded-lg bg-linear-to-r from-orange-400 via-yellow-600 to-neutral-950 px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition-colors shadow-sm"
+                className="btn-gold rounded-lg px-4 py-2 text-sm transition-colors shadow-sm"
               >
                 Register
               </Link>
@@ -331,7 +335,7 @@ export default function Navbar() {
                     <Link
                       href="/register"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center justify-center rounded-lg bg-primary py-2 text-center text-sm font-medium text-white hover:bg-violet-700"
+                      className="btn-gold w-full text-center rounded-lg px-4 py-3 text-sm transition-colors"
                     >
                       Register
                     </Link>

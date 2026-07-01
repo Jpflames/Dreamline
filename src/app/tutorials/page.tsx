@@ -287,7 +287,7 @@ function TutorialsContent() {
                       <Play className="h-5 w-5 fill-white" />
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between">
                     <div className="flex items-center justify-between">
                       <span className="rounded bg-red-600 px-2 py-0.5 text-xs text-white font-semibold">
                         YouTube
