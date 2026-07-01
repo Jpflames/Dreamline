@@ -52,8 +52,9 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md transition-all">
-      <div className="mx-auto flex max-w-7xl h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <>
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md transition-all">
+        <div className="mx-auto flex max-w-7xl h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
         
         {/* Branding Logo */}
         <Link href="/" className="flex items-center gap-3 group">
@@ -204,7 +205,8 @@ export default function Navbar() {
             <Menu className="h-6 w-6" />
           </button>
         </div>
-      </div>
+        </div>
+      </header>
 
       {/* Mobile Drawer (Slide-out drawer) */}
       <AnimatePresence>
@@ -223,51 +225,71 @@ export default function Navbar() {
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 bottom-0 z-50 w-72 bg-card p-6 shadow-2xl dark:bg-slate-900 border-l border-border md:hidden flex flex-col justify-between"
+              transition={{ type: 'tween', ease: [0.16, 1, 0.3, 1], duration: 0.4 }}
+              className="fixed right-0 top-0 bottom-0 z-50 w-80 bg-background p-6 shadow-2xl dark:bg-slate-950 border-l border-border/50 md:hidden flex flex-col justify-between overflow-y-auto"
             >
               <div>
-                <div className="flex items-center justify-between pb-6 border-b border-border">
-                  <span className="text-lg font-bold font-poppins text-gradient-purple">Dreamline</span>
+                <div className="flex items-center justify-between pb-6 border-b border-border/50">
+                  <div className="flex items-center gap-3">
+                    <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-8 w-auto" />
+                    <div className="flex flex-col leading-none">
+                      <span className="text-lg font-bold font-poppins tracking-tight text-gradient-gold">Dreamline</span>
+                      <span className="text-[9px] font-bold tracking-[0.2em] text-muted-foreground uppercase mt-1">visuals</span>
+                    </div>
+                  </div>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="rounded-lg p-2 hover:bg-accent transition-all"
+                    className="rounded-full p-2 bg-accent/50 text-muted-foreground hover:bg-accent hover:text-foreground transition-all"
                   >
-                    <X className="h-6 w-6" />
+                    <X className="h-5 w-5" />
                   </button>
                 </div>
 
-                <nav className="mt-8 flex flex-col space-y-4">
-                  {navLinks.map((link) => {
+                <nav className="mt-8 flex flex-col space-y-6">
+                  {navLinks.map((link, idx) => {
                     if (link.dropdown) {
                       return (
-                        <div key={link.name} className="flex flex-col space-y-2">
-                          <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wider pl-3">{link.name}</span>
-                          {link.dropdown.map(subItem => (
-                            <Link
-                              key={subItem.name}
-                              href={subItem.path}
-                              onClick={() => setMobileMenuOpen(false)}
-                              className="rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent transition-all"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
+                        <motion.div 
+                          key={link.name} 
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.1 + idx * 0.05 }}
+                          className="flex flex-col space-y-3"
+                        >
+                          <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest pl-2">{link.name}</span>
+                          <div className="flex flex-col space-y-1">
+                            {link.dropdown.map(subItem => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.path}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-primary transition-all"
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
                       );
                     }
                     const isActive = pathname === link.path;
                     return (
-                      <Link
+                      <motion.div
                         key={link.name}
-                        href={link.path}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className={`rounded-lg px-3 py-2 text-base font-medium transition-all ${
-                          isActive ? 'bg-primary/10 text-primary' : 'hover:bg-accent'
-                        }`}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 + idx * 0.05 }}
                       >
-                        {link.name}
-                      </Link>
+                        <Link
+                          href={link.path}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`block rounded-lg px-3 py-2.5 text-base font-semibold transition-all ${
+                            isActive ? 'bg-primary/10 text-primary border-l-2 border-primary pl-4' : 'hover:bg-accent text-foreground'
+                          }`}
+                        >
+                          {link.name}
+                        </Link>
+                      </motion.div>
                     );
                   })}
                 </nav>
@@ -346,6 +368,6 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
