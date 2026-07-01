@@ -56,12 +56,12 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
         
         {/* Branding Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-10 w-auto" />
-          <span className="text-xl font-bold font-poppins tracking-tight flex items-center">
-            <span className="text-gradient-gold">Dreamline</span>
-            <span className="text-foreground ml-1 font-semibold">visuals</span>
-          </span>
+        <Link href="/" className="flex items-center gap-3 group">
+          <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-10 w-auto group-hover:scale-105 transition-transform" />
+          <div className="flex flex-col leading-none">
+            <span className="text-xl font-bold font-poppins tracking-tight text-gradient-gold">Dreamline</span>
+            <span className="text-[10px] font-bold tracking-[0.2em] text-muted-foreground uppercase mt-1">visuals</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation Link Menu */}

@@ -88,12 +88,12 @@ export default function Footer() {
           
           {/* Logo & Info */}
           <div className="space-y-6 xl:col-span-1">
-            <Link href="/" className="flex items-center gap-3">
-              <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-12 w-auto" />
-              <span className="text-2xl font-bold font-poppins tracking-tight flex items-center">
-                <span className="text-gradient-gold">Dreamline</span>
-                <span className="text-foreground ml-1.5 font-semibold">visuals</span>
-              </span>
+            <Link href="/" className="flex items-center gap-3 group">
+              <img src="/Dreamline-media-Logob.png" alt="Dreamline Logo" className="h-12 w-auto group-hover:scale-105 transition-transform" />
+              <div className="flex flex-col leading-none">
+                <span className="text-2xl font-bold font-poppins tracking-tight text-gradient-gold">Dreamline</span>
+                <span className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase mt-1">visuals</span>
+              </div>
             </Link>
             <p className="text-sm text-slate-700 dark:text-slate-300 max-w-md">
               Learn creative design, branding, illustration, editing, and animation directly from experts. Master the tools and build a professional portfolio.
