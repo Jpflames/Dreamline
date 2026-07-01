@@ -9,11 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.2",
     "canvas-confetti": "^1.9.3",
     "firebase": "^10.12.0",
     "framer-motion": "^11.2.10",
-    "lightningcss-win32-x64-msvc": "^1.32.0",
     "lucide-react": "^0.395.0",
     "motion-dom": "^12.42.1",
     "next": "16.2.9",
