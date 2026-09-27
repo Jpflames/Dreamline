@@ -60,7 +60,7 @@ export default function DPulseArticlePage() {
           {/* Hero Banner Image */}
           <div className="w-full h-[350px] rounded-[40px] overflow-hidden relative mb-8 shadow-xl">
             <img 
-              src="https://images.unsplash.com/photo-1548625361-9c6bc76313b8?w=1200&q=80" 
+              src="https://picsum.photos/seed/dpulsebanner/1200/500" 
               alt="Glory Dome" 
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -90,7 +90,7 @@ export default function DPulseArticlePage() {
             <div className="float-right ml-8 mb-4 mt-2 w-[350px]">
               <div className="bg-red-900 rounded-[40px] overflow-hidden shadow-xl border-4 border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80" 
+                  src="https://picsum.photos/seed/dpulseportrait/500/750" 
                   alt="Dr. Paul and Dr. Becky Enenche" 
                   className="w-full h-auto object-cover"
                 />

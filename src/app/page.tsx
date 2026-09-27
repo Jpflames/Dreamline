@@ -6,10 +6,10 @@ import { Play, ChevronRight, Facebook, Instagram, Youtube, Twitter, Disc } from 
 import Image from 'next/image';
 
 const GALLERY_ITEMS = [
-  { id: 1, title: 'Dream it. We Create it.', image: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=500&q=80' },
-  { id: 2, title: 'The Best for all PODCAST', image: 'https://images.unsplash.com/photo-1590602847861-f357a9162c6a?w=500&q=80' },
-  { id: 3, title: 'Way to the Back Room', image: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&q=80' },
-  { id: 4, title: 'Credibility you can count on', image: 'https://images.unsplash.com/photo-1555169062-013468b47731?w=500&q=80' },
+  { id: 1, title: 'Dream it. We Create it.', image: 'https://picsum.photos/seed/gallery1/500/800' },
+  { id: 2, title: 'The Best for all PODCAST', image: 'https://picsum.photos/seed/gallery2/500/800' },
+  { id: 3, title: 'Way to the Back Room', image: 'https://picsum.photos/seed/gallery3/500/800' },
+  { id: 4, title: 'Credibility you can count on', image: 'https://picsum.photos/seed/gallery4/500/800' },
 ];
 
 export default function HomePage() {

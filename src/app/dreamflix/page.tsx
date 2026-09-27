@@ -6,12 +6,12 @@ import { Play, ChevronLeft, ChevronRight, Filter } from 'lucide-react';
 import Image from 'next/image';
 
 const MOVIES = [
-  { id: 1, title: 'The Back Room', image: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&q=80' },
-  { id: 2, title: 'Abayomi', image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500&q=80' },
-  { id: 3, title: 'Abattoir 3', image: 'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=500&q=80' },
-  { id: 4, title: 'Higher Calling', image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500&q=80' },
-  { id: 5, title: 'Abattoir 5', image: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=500&q=80' },
-  { id: 6, title: 'The Train', image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500&q=80' },
+  { id: 1, title: 'The Back Room', image: '/movie1.jpg' },
+  { id: 2, title: 'Abayomi', image: '/movie2.jpg' },
+  { id: 3, title: 'Abattoir 3', image: '/movie3.jpg' },
+  { id: 4, title: 'Higher Calling', image: '/movie4.jpg' },
+  { id: 5, title: 'Abattoir 5', image: '/movie5.jpg' },
+  { id: 6, title: 'The Train', image: '/movie6.jpg' },
 ];
 
 export default function DreamflixPage() {
@@ -90,9 +90,9 @@ export default function DreamflixPage() {
           {/* Featured Hero Banner */}
           <div className="relative w-full h-[50vh] min-h-[400px] bg-black group flex items-center justify-center overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=1600&q=80" 
+              src="/movie1.jpg" 
               alt="The Back Room" 
-              className="absolute inset-0 w-full h-full object-cover opacity-60"
+              className="absolute inset-0 w-full h-full object-cover object-top opacity-60"
             />
             {/* Dark vignette */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#09080A] via-transparent to-transparent" />

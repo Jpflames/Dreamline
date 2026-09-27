@@ -10,12 +10,12 @@ const SIDEBAR_BOTTOM_LINKS = ['Trending', 'Artist', 'Playlist', 'Recommended', '
 const CATEGORIES = ['All', 'Afrosounds', 'Hip-Hop/Rap', 'Jazz/Blues', 'Pop', 'R&B', 'Rock', 'Country', 'Instrumental', 'Podcast', 'Electronic'];
 
 const ALBUMS = [
-  { id: 1, title: 'Always Good', artist: 'Michael Bassey ft Travis Greene', image: 'https://images.unsplash.com/photo-1516280440502-3c22054dc24b?w=500&q=80' },
-  { id: 2, title: 'Lord Have Your Way', artist: 'Efe Grace', image: 'https://images.unsplash.com/photo-1493225457124-a1a2a5956093?w=500&q=80' },
-  { id: 3, title: 'Giver of Good Things', artist: 'Joseph Briggs', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80' },
-  { id: 4, title: 'City of God', artist: 'Dunsin Oyekan', image: 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=500&q=80' },
-  { id: 5, title: 'Favour Favour', artist: 'Lawrence Oyor', image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&q=80' },
-  { id: 6, title: 'Testimony', artist: 'Efe Grace', image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&q=80' },
+  { id: 1, title: 'Always Good', artist: 'Michael Bassey ft Travis Greene', image: '/album1.jpg' },
+  { id: 2, title: 'Lord Have Your Way', artist: 'Efe Grace', image: '/album2.jpg' },
+  { id: 3, title: 'Giver of Good Things', artist: 'Joseph Briggs', image: '/album3.jpg' },
+  { id: 4, title: 'City of God', artist: 'Dunsin Oyekan', image: '/album4.jpg' },
+  { id: 5, title: 'Favour Favour', artist: 'Lawrence Oyor', image: '/album5.jpg' },
+  { id: 6, title: 'Testimony', artist: 'Efe Grace', image: '/album6.jpg' },
 ];
 
 export default function DPlayPage() {
@@ -90,7 +90,7 @@ export default function DPlayPage() {
           {/* Banner */}
           <div className="w-full min-h-[350px] py-12 rounded-2xl overflow-hidden relative mb-8 flex items-center">
             <img 
-              src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80" 
+              src="/dplaybanner.jpg" 
               alt="DJ Setup" 
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
